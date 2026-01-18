@@ -37,3 +37,7 @@ let dino_food = sprites.create(img`
     `, SpriteKind.Player)
 dino_food.setPosition(117, 55)
 dino_pet.setPosition(28, 21)
+
+
+let chris_thing = sprites.create(assets.image`myImage`);
+chris_thing.setPosition(80, 64)
