@@ -1,3 +1,8 @@
+game.onUpdateInterval(5, () => {
+    worm.vx = Math.random() * 20 - 10;
+    worm.vy = Math.random() * 20 - 10;
+});
+
 scene.setBackgroundColor(6)
 let dino_pet = sprites.create(img`
     . . . . f f f f f . . . . . . .
@@ -40,8 +45,5 @@ dino_pet.setPosition(28, 21)
 
 controller.moveSprite(dino_food)
 
-
-
-let chris_thing = sprites.create(assets.image`myImage`);
-chris_thing.setPosition(80, 64)
-
+let worm = sprites.create(assets.image`myImage`);
+worm.setPosition(80, 64)
