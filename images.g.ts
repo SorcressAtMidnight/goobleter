@@ -42,9 +42,3 @@ namespace myImages {
 
 }
 // Auto-generated code. Do not edit.
-
-// Auto-generated code. Do not edit.
-namespace myTiles {
-
-}
-// Auto-generated code. Do not edit.

@@ -1,22 +1,22 @@
 scene.setBackgroundColor(6)
 let dino_pet = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . 8 f 8 f 8 f 
-    . . . . f f f f f f f f f f f f 
-    . . . . f f f f f f f f . . . . 
-    . f f f f f f f f f f f . . . . 
-    f . . . f f f f f f f f . . . . 
-    f . . . f . . f . . f . . . . . 
-    . . . . f . . f . . f . . . . . 
-    . . . . f . . f . . f . . . . . 
-    `, SpriteKind.Enemy)
+    . . . . f f f f f . . . . . . .
+    . . . f e e e e e f . . . . . .
+    . . f d d d d e e e f . . . . .
+    . c d d d d d d e e f f . . . .
+    . c d f d d f d e e d d f . . .
+    c d e e d d d d e e b d c . . .
+    c d d d d c d d e e b d c . . .
+    c c c c c d d e e e f c . . . .
+    . f d d d d e e e f f . . . . .
+    . . f f f f f e e e e f . . . .
+    . . . . f f e e e e e e f . f f
+    . . . f e e f e e f e e f . e f
+    . . f e e f e e f e e e f . e f
+    . f b d f d b f b b f e f f e f
+    . f d d f d d f d d b e f f f f
+    . . f f f f f f f f f f f f f .
+`, SpriteKind.Enemy)
 let dino_food = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
@@ -38,6 +38,10 @@ let dino_food = sprites.create(img`
 dino_food.setPosition(117, 55)
 dino_pet.setPosition(28, 21)
 
+controller.moveSprite(dino_food)
+
+
 
 let chris_thing = sprites.create(assets.image`myImage`);
 chris_thing.setPosition(80, 64)
+
