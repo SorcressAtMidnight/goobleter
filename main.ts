@@ -1,8 +1,3 @@
-game.onUpdateInterval(5, () => {
-    worm.vx = Math.random() * 20 - 10;
-    worm.vy = Math.random() * 20 - 10;
-});
-
 scene.setBackgroundColor(6)
 let dino_pet = sprites.create(img`
     . . . . f f f f f . . . . . . .
@@ -45,5 +40,18 @@ dino_pet.setPosition(28, 21)
 
 controller.moveSprite(dino_food)
 
-let worm = sprites.create(assets.image`myImage`);
+// start:Chris Area 1
+
+let worm = sprites.create(assets.image`myImage`, SpriteKind.Enemy);
 worm.setPosition(80, 64)
+
+game.onUpdateInterval(5, () => {
+    worm.vx = Math.random() * 20 - 10;
+    worm.vy = Math.random() * 20 - 10;
+});
+
+sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, (a, b) => {
+    b.sayText("ouch!", 500);
+});
+
+// end:Chris Area 1
